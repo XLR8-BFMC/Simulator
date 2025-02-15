@@ -15,3 +15,17 @@ Tips on how to install and work on it, can be found in the
 
 ## The documentation is available in details here:
 [Documentation](https://bosch-future-mobility-challenge-documentation.readthedocs-hosted.com/data/simulator.html)
+
+
+## Camera settings 
+the launch script is ```roslaunch sim_pkg map_with_car_REC.launch ``` but only from the Simulator folder after sourcing devel/setup.bash 
+
+to start the posting of camera images outside the sim  ```rosrun example camera.py```
+to start the reciving of actions inside the sim  ```rosrun example control.py``` 
+
+file for camera settings is located in the following path:<br>
+[camera on the car](/catkin_ws/Simulator/src/models_pkg/camera_follow/model.sdf)
+
+[cam above](catkin_ws/Simulator/src/models_pkg/cam_birdeye_REC/model.sdf) <br>
+[position of the car in the sim](catkin_ws/Simulator/src/sim_pkg/launch/sublaunchers/car_REC.launch) <br>
+
