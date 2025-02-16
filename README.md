@@ -18,7 +18,7 @@ Tips on how to install and work on it, can be found in the
 
 ## Docker setup 
 ```docker build -t ros_noetic_simulator .```  This build the image with every needed dependency <br>
-```docker run --name simulator_container --env="DISPLAY=$DISPLAY" --env="QT_X11_NO_MITSHM=1" --env="XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR" --env="WAYLAND_DISPLAY=$WAYLAND_DISPLAY" --volume="$PWD/Simulator:/Simulator" --volume="$PWD/shared:/shared" --volume="/tmp/.X11-unix:/tmp/.X11-unix" --net=host --privileged -it ros_noetic_simulator bash``` <br>
+```docker run --name simulator_container --env="DISPLAY=$DISPLAY" --env="QT_X11_NO_MITSHM=1" --env="XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR" --env="WAYLAND_DISPLAY=$WAYLAND_DISPLAY" --volume="$PWD:/Simulator" --volume="$PWD/shared:/shared" --volume="/tmp/.X11-unix:/tmp/.X11-unix" --net=host --privileged -it ros_noetic_simulator bash``` <br>
 
 THIS MONSTER OF A COMMAND WILL RUN THE CONTAINER WITH THE SIMULATOR INSIDE IT.<br>
 
